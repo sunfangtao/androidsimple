@@ -1,0 +1,46 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion '26.0.2'
+    defaultConfig {
+        // TODO 替换自己应用的ID
+        applicationId "com.sft.newbaseactivityapplication"
+        minSdkVersion 15
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        manifestPlaceholders = [
+                // TODO 替换自己应用的APP_ID和SERVER_ID
+                APP_ID   : "023b1a33-192c-43e0-9fa9-9f4dd7be780c",
+                SERVER_ID: "serverId:6228c27a162e439fa55feabddb00b697",
+        ]
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:26.+'
+    compile 'com.android.support:design:26.+'
+    compile 'com.android.support:recyclerview-v7:26.+'
+    compile 'com.android.support.constraint:constraint-layout:1.0.1'
+    annotationProcessor "org.androidannotations:androidannotations:4.2.0"
+    compile 'org.androidannotations:androidannotations-api:4.2.0'
+    testCompile 'junit:junit:4.12'
+
+    // BaseGuideActivity需要使用
+    implementation 'cn.bingoogolapple:bga-banner:2.2.4@aar'
+    implementation 'com.sft:core-base:1.2.3@aar'
+}
+
