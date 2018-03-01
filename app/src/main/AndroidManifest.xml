@@ -19,6 +19,7 @@
 
         <activity android:name=".activity.MainActivity" android:label="index"/>
         <activity android:name=".activity.LoginActivity" android:label="login"/>
+        <activity android:name=".activity.Login" android:label="loginKT"/>
         <activity android:name=".activity.GuideActivity"/>
         <meta-data
             android:name="appId"

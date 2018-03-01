@@ -78,7 +78,7 @@ public class WelcomeActivity extends BaseWelcomeActivity implements GuideListene
      */
     @Override
     public Class setLoginActivty() {
-        return LoginActivity.class;
+        return Login.class;
     }
 
     /**
