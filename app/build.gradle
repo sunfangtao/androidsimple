@@ -43,7 +43,7 @@ dependencies {
 
     // BaseGuideActivity需要使用
     implementation 'cn.bingoogolapple:bga-banner:2.2.4@aar'
-    implementation 'com.sft:core-base:1.2.4@aar'
+    implementation 'com.sft:core-base:1.2.5@aar'
 }
 
 
