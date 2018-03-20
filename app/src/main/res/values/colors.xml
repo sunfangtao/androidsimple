@@ -1,6 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <!-- 系统预制颜色，不要修改"name" -->
+    <!-- 标题栏颜色 -->
+    <color name="colorPrimary">#01A9F2</color>
+    <!-- 状态栏颜色 -->
+    <color name="colorPrimaryDark">#036592</color>
+    <!-- 控件选中颜色 -->
+    <color name="colorAccent">#01A9F2</color>
+    <!-- 控件选中颜色 -->
+    <color name="activityBackground">#F5F5F5</color>
+    <!-- 标题栏标题颜色 -->
+    <color name="toolbarColorTitle">#000000</color>
+    <!-- 标题栏颜色 ？？？？？？？-->
+    <color name="toolbarColorMenu">#000000</color>
+    <!-- 标题栏右侧弹出菜单颜色 -->
+    <color name="toolbarColorPopupMenu">#000000</color>
+
+    <!-- —————————————————————————————————————————————————————————————————————————————————————————— -->
+    <!-- 自定义颜色，可根据需求修改 -->
+    <!-- 自定义颜色，文字颜色 -->
+    <color name="colorWhiteText">#FFFFFF</color>
+    <color name="colorGrayText">#616161</color>
+    <color name="colorLightGrayText">#838383</color>
+    <color name="colorBlackText">#404040</color>
+    <color name="colorRedText">#FF523E</color>
+    <color name="colorBlueText">#2FB0FF</color>
+    <!-- 自定义颜色，背景颜色 -->
+    <color name="colorTransPrimary">#4C01A9F2</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorTransWhite">#99FFFFFF</color>
+    <color name="colorDeepGray">#616161</color>
+    <color name="colorGray">#838383</color>
+    <color name="colorTransGray">#DD838383</color>
+    <color name="colorLightGray">#DDDDDD</color>
+    <color name="colorBlue">#04AAF6</color>
+    <color name="colorTransBlue">#DD04AAF6</color>
+    <color name="colorRed">#FF523E</color>
+    <color name="colorTransRed">#4DFF523E</color>
+    <color name="colorOrange">#FE7D55</color>
 </resources>

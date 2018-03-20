@@ -1,0 +1,20 @@
+new DateTimeSelector(this, new DateTimeSelector.SelectDateTimeListener() {
+            @Override
+            public void onSelectDateTime(boolean isConfirm, String dateTime) {
+            // dateTime 用户点击确定或滑动滚轮回调的时间，格式与传入参数一致
+                if (isConfirm) {
+                    // 用户点击确定
+                }
+            }
+        }, "2015-02-27 00:00:00", "2017-11-25 00:60:00")
+
+new DateTimeSelector(this, new DateTimeSelector.SelectDateTimeListener() {
+            @Override
+            public void onSelectDateTime(boolean isConfirm, String dateTime) {
+            // dateTime 用户点击确定或滑动滚轮回调的时间，格式与传入参数一致
+                if (isConfirm) {
+                    // 用户点击确定
+                }
+            }
+        }, "2015-02-27 00:00:00", "2017-11-25 00:60:00",new SimpleDateFormat("yyyy-MM-dd HH:mm:ss"))
+        .setDefaultDate("2017-11-24 10:50:00").show();

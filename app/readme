@@ -1,0 +1,18 @@
+使用注意：
+1、修改build.gradle（app中的）中的applicationId,APP_ID,SERVER_ID. 已经用TODO进行了标识,具体参数值请与管理员获取
+2、colors.xml中系统预制颜色中的name属性不要修改，可根据实际需要修改对应的value，共指定7种预制颜色
+3、styles.xml中系统预制样式中的name属性不要修改，可根据实际需要修改对应的value，共指定5种预制样式；使用默认值，可将相应样式注释（采用默认值，其中颜色值与colors.xml配置有关）
+4、sample包中有部分类的使用说明，持续更新中...
+
+BaseActivity使用方法：
+一、自动恢复功能
+1、所有View的监听事件取消，请手动在protected void afterRestoreInstanceState(Bundle bundle)中进行绑定
+2、当前类中出现的基本类型、List、Map、Fragment以及可序列化的对象自动保存（父类中需要保存，请手动调用方法进行保存）
+二、BaseActivity中工具
+1、BaseActivity中内置了toast、savedInstanceState、toolbar、sharedPreferenceUtil等使用小工具
+2、BaseActivity通信可使用广播Intent intent = new Intent(Activity.name); 回调public void forReceiverResult(Intent intent)方法
+3、BaseActivity内置了ToolBar对象的处理，使用时添加布局即可(R.layout.toolbar)
+三、BaseActiviyt子类
+1、BaseParseHelperActivity 实现自动解析，解析过程在线程中执行，复写getHttpParseHelper()可自定义解析
+2、BaseWelcomeActivity 实现欢迎、引导、自动登录、权限申请等功能（通过Listener实现）可参考WelcomeActivity
+3、RadioButtonFragmentActivity 实现RadioButton为底部，Fragment为切换页面的功能
