@@ -3,8 +3,6 @@ package com.nevbg.simple.activity;
 import android.os.Bundle;
 import android.widget.ImageView;
 
-import com.nevbg.simple.common.MyApplication;
-
 import cn.sft.base.activity.BaseParseHelperActivity;
 import cn.sft.util.Util;
 

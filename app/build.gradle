@@ -5,7 +5,7 @@ android {
     compileSdkVersion 26
     buildToolsVersion '26.0.2'
     defaultConfig {
-        // TODO 替换自己应用的ID
+        // TODO 替换自己应用的ID,applicationId错误将直接关闭APP
         applicationId "com.sft.newbaseactivityapplication"
         minSdkVersion 15
         targetSdkVersion 26
@@ -43,7 +43,7 @@ dependencies {
 
     // BaseGuideActivity需要使用
     implementation 'cn.bingoogolapple:bga-banner:2.2.4@aar'
-    implementation 'com.sft:core-base:1.2.7@aar'
+    implementation 'com.sft:core-base:1.2.6@aar'
 }
 
 

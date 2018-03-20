@@ -112,7 +112,7 @@ public class WelcomeActivity extends BaseWelcomeActivity implements GuideListene
      */
     @Override
     public String getLoginUsername() {
-        return "test5";
+        return "admin";
     }
 
     /**
@@ -122,7 +122,7 @@ public class WelcomeActivity extends BaseWelcomeActivity implements GuideListene
      */
     @Override
     public String getLoginPassword() {
-        return "123456";
+        return "admin";
     }
 
     boolean isAutoJump = true;
