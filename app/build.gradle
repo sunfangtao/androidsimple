@@ -1,5 +1,6 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
 
 android {
     compileSdkVersion 26
@@ -19,10 +20,41 @@ android {
                 SERVER_ID: "serverId:6228c27a162e439fa55feabddb00b697",
         ]
     }
+
+    signingConfigs {
+        release {
+            keyAlias '1000'
+            keyPassword '123456'
+            storeFile file('C:/Users/Administrator/Desktop/flysand.jks')
+            storePassword '123456'
+        }
+    }
+
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+
+        debug {
+            applicationIdSuffix ".debug"
+            manifestPlaceholders = [
+                    JPUSH_PKGNAME: defaultConfig.applicationId + applicationIdSuffix,
+                    APP_ID       : "8a5b4b5c-4b44-494d-a374-cc8b04c67789",
+                    URL          : "http://221.0.91.34:12080",
+                    AMAP_MAP     : "4951819e37b2f38ee2af4921d1ee57c6",
+            ]
+        }
+    }
+
+    applicationVariants.all { variant ->
+        variant.outputs.all { output ->
+            def outputFile = output.outputFile
+            if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                def fileName = "${variant.getBuildType().name}_v${variant.versionName}.apk"
+                outputFileName = new File("../", fileName)
+            }
         }
     }
 }
@@ -36,14 +68,12 @@ dependencies {
     compile 'com.android.support:design:26.+'
     compile 'com.android.support:recyclerview-v7:26.+'
     compile 'com.android.support.constraint:constraint-layout:1.0.1'
-    annotationProcessor "org.androidannotations:androidannotations:4.2.0"
-    compile 'org.androidannotations:androidannotations-api:4.2.0'
     compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
     testCompile 'junit:junit:4.12'
 
     // BaseGuideActivity需要使用
     implementation 'cn.bingoogolapple:bga-banner:2.2.4@aar'
-    implementation 'com.sft:core-base:1.2.6@aar'
+    implementation 'com.wxt:base-core:1.0.0.3@aar'
 }
 
 
