@@ -2,7 +2,6 @@ package com.nevbg.simple.activity
 
 import android.os.Bundle
 import android.widget.ImageView
-
 import cn.sft.base.activity.BaseParseHelperActivity
 import cn.sft.util.Util
 
@@ -18,14 +17,9 @@ class LoginActivity : BaseParseHelperActivity() {
         Util.print("LoginActivity")
 
         foo(strings = *arrayOf("a", "b", "c"));
-    }
-
-    fun foo(vararg strings: String) {
-        /* ... */
-    }
-
-
-    override fun afterRestoreInstanceState(savedInstanceState: Bundle) {
 
     }
+
+    fun foo(vararg strings: String) = ""
+
 }

@@ -11,7 +11,7 @@ android {
         minSdkVersion 15
         targetSdkVersion 26
         versionCode 1
-        versionName "1.0"
+        versionName "1.0.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
         manifestPlaceholders = [
@@ -73,7 +73,7 @@ dependencies {
 
     // BaseGuideActivity需要使用
     implementation 'cn.bingoogolapple:bga-banner:2.2.4@aar'
-    implementation 'com.wxt:base-core:1.0.0.3@aar'
+    implementation 'com.wxt:base-core:1.0.0.5@aar'
 }
 
 
