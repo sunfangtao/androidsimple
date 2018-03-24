@@ -12,7 +12,7 @@ class MyApplication : BaseApplication() {
     override fun onCreate() {
         super.onCreate()
         if (INSTANCE == null) {
-//            INSTANCE = BaseApplication.getInstance()
+            INSTANCE = BaseApplication.getInstance()
         }
         CrashHandler.init(this, true)
     }
