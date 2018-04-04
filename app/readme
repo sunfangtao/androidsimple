@@ -1,5 +1,5 @@
 使用注意：
-1、修改build.gradle（app中的）中的applicationId,APP_ID,SERVER_ID. 已经用TODO进行了标识,具体参数值请与管理员获取
+1、修改build.gradle（app中的）中的applicationId,APP_ID,DEFAULT_HTTP_PARAMS. 已经用TODO进行了标识,具体参数值请与管理员获取
 2、colors.xml中系统预制颜色中的name属性不要修改，可根据实际需要修改对应的value，共指定7种预制颜色
 3、styles.xml中系统预制样式中的name属性不要修改，可根据实际需要修改对应的value，共指定5种预制样式；使用默认值，可将相应样式注释（采用默认值，其中颜色值与colors.xml配置有关）
 4、sample包中有部分类的使用说明，持续更新中...
@@ -16,4 +16,39 @@ BaseActivity使用方法：
 1、BaseParseHelperActivity 实现自动解析，解析过程在线程中执行，复写getHttpParseHelper()可自定义解析
 2、BaseWelcomeActivity 实现欢迎、引导、自动登录、权限申请等功能（通过Listener实现）可参考WelcomeActivity
 3、RadioButtonFragmentActivity 实现RadioButton为底部，Fragment为切换页面的功能
-4、
+4、BaseLoginActivity 实现基本的登录功能以及临时登录的返回，实现登录用户名和密码的自动保存；可通过getLastUserName()，getLastPassword()进行获取
+5、BaseGuideActivity 实现基本的引导页功能
+
+BaseAdapter使用方法
+1、为RecyclerView的适配器，不支持ListView
+2、查看源码获取可用方法
+
+BaseApplication使用方法
+1、应用中Application继承BaseApplication
+2、提供了对象（可序列化）的存取方法
+
+BaseFragment使用方法
+1、可参考BaseActivity中的部分功能
+
+异常捕获功能使用方法
+1、CrashHandler中的public final static void init(Context context, boolean isHandlerCrash)进行开启和关闭
+2、CrashParams可以自定义上传的异常参数，系统已默认添加了基本的参数
+3、LogMember可以配置异常时记录的日志条数
+
+网络请求使用方法
+1、SimpleHttpParseListener 实现网络请求的回调
+2、HttpParseHelper 实现网络请求结果的解析工作
+3、HttpUtil中包含get、post请求；请求时可以提供欲解析的类，结果将直接提供相应的对象
+4、整个过程都在线程中进行，解析成Json或者Object后回到主线程
+5、重定向和Cookie自动管理，请求可以随时取消，页面关闭将自动取消相关联的请求
+
+util中添加了部分使用工具类
+
+view中添加了部分自定义的控件
+
+分页树使用方法
+1、节点需要继承PageTreeNode，可添加其他属性
+2、PageTreeHelper实现交互
+3、PageTreeUpdateListener实现更新回调
+4、tree中的branch不支持分页，leaf支持分页加载
+

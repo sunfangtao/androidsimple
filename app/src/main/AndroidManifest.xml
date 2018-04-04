@@ -30,7 +30,7 @@
             android:value="${APP_ID}" />
 
         <meta-data
-            android:name="SERVER_ID"
-            android:value="${SERVER_ID}" />
+            android:name="httpParams"
+            android:value="${DEFAULT_HTTP_PARAMS}" />
     </application>
 </manifest>

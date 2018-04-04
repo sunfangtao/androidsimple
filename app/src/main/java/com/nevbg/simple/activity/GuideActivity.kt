@@ -5,7 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import com.nevbg.simple.R
 import java.util.ArrayList
-import cn.sft.base.activity.BaseGuideActivity
+import com.wxt.library.base.activity.BaseGuideActivity
 
 /**
  * 引导页
@@ -30,7 +30,4 @@ class GuideActivity : BaseGuideActivity() {
         return list
     }
 
-    override fun afterRestoreInstanceState(bundle: Bundle) {
-
-    }
 }

@@ -1,7 +1,7 @@
 package com.nevbg.simple.common
 
-import cn.sft.base.application.BaseApplication
-import cn.sft.crash.CrashHandler
+import com.wxt.library.base.application.BaseApplication
+import com.wxt.library.crash.CrashHandler
 
 /**
  * Created by Administrator on 2017/4/18.
@@ -21,4 +21,5 @@ class MyApplication : BaseApplication() {
         // getInstance()必须在onCreate()之后调用，否则为空值
         var INSTANCE: MyApplication? = null
     }
+
 }

@@ -1,6 +1,6 @@
 package com.nevbg.simple.base
 
-import cn.sft.base.activity.BaseParseHelperActivity
+import com.wxt.library.base.activity.BaseParseHelperActivity
 
 /**
  * Created by Administrator on 2018/3/20.
