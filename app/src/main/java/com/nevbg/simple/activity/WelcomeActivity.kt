@@ -1,9 +1,12 @@
 package com.nevbg.simple.activity
 
+import com.nevbg.simple.bean.User
 import com.wxt.library.base.activity.BaseWelcomeActivity
 import com.wxt.library.listener.AutoLoginListener
 import com.wxt.library.listener.GuideListener
 import com.wxt.library.listener.PermissionListener
+import com.wxt.library.util.Util
+import org.json.JSONObject
 
 /**
  * 欢迎界面
@@ -11,9 +14,9 @@ import com.wxt.library.listener.PermissionListener
  * AutoLoginListener 用户已登录用户的自动登录功能
  * PermissionListener 用户可在欢迎界面直接申请权限
  */
-class WelcomeActivity : BaseWelcomeActivity(), GuideListener, AutoLoginListener, PermissionListener {
+class WelcomeActivity : BaseWelcomeActivity(), GuideListener, AutoLoginListener<Any>, PermissionListener {
 
-    var isAutoJump = true
+    private var isAutoJump = true
 
     /**
      * 指定APP是否需要先登录
@@ -46,9 +49,20 @@ class WelcomeActivity : BaseWelcomeActivity(), GuideListener, AutoLoginListener,
     /**
      * 是否自动跳转 ，此方法会不断调用（用于欢迎页面自定义操作后再跳转）
      *
-     * @return true 自动跳转， false 不跳转
+     * @return true 自动跳转， false 不跳转;true后再跳转
      */
     override fun autoJump() = isAutoJump
+
+    /**
+     * APP自动登录返回
+     * @param isSuccess 登录结果：true成功，否则false（包括无法自动登录等情况）
+     * @param jsonObject 登录返回的json对象
+     * @param user 登录返回json对象的解析结果（需要在AutoLoginListener中指定类型，否则不解析）;登录失败为空
+     * @param message 登录的提示（成功为null）
+     */
+    override fun parseLogin(isSuccess: Boolean, jsonObject: JSONObject?, user: Any?, message: String?) {
+        Util.print("user=" + user)
+    }
 
     /**
      * 获取的权限列表，相关的值从PermissionRequestUtil中获取

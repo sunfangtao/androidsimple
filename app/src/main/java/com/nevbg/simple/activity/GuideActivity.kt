@@ -1,11 +1,10 @@
 package com.nevbg.simple.activity
 
-import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import com.nevbg.simple.R
-import java.util.ArrayList
 import com.wxt.library.base.activity.BaseGuideActivity
+import java.util.*
 
 /**
  * 引导页
@@ -16,8 +15,7 @@ import com.wxt.library.base.activity.BaseGuideActivity
  */
 class GuideActivity : BaseGuideActivity() {
 
-    override fun setGuideViews(): List<View> {
-        val inflater = LayoutInflater.from(this)
+    override fun setGuideViews(inflater: LayoutInflater): List<View> {
         val list = ArrayList<View>()
         // 最后一个引导页面，需要实现点击关闭引导页面功能
         val view: View = inflater.inflate(R.layout.item_receiver_select_title, null, false)

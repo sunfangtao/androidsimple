@@ -1,5 +1,6 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
 apply plugin: 'kotlin-android-extensions'
 
 android {
@@ -19,6 +20,20 @@ android {
                 APP_ID             : "023b1a33-192c-43e0-9fa9-9f4dd7be780c",
                 DEFAULT_HTTP_PARAMS: "serverId:6cdb89e16d994a459494cf9ebb55c198",
         ]
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = ["resourcePackageName": android.defaultConfig.applicationId]
+            }
+        }
+
+        multiDexEnabled true
+
+        dexOptions {
+//            additionalParameters += '--main-dex-list=maindexlist.txt'
+//            additionalParameters += '--minimal-main-dex'
+            additionalParameters += '--set-max-idx-number=48000'
+        }
     }
 
     signingConfigs {
@@ -40,11 +55,16 @@ android {
 
         debug {
             applicationIdSuffix ".debug"
-            manifestPlaceholders = [
-                    JPUSH_PKGNAME: defaultConfig.applicationId + applicationIdSuffix,
-                    APP_ID       : "023b1a33-192c-43e0-9fa9-9f4dd7be780c",
-            ]
         }
+    }
+
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
+
+    productFlavors {
     }
 
     applicationVariants.all { variant ->
@@ -72,7 +92,12 @@ dependencies {
 
     // BaseGuideActivity需要使用
     implementation 'cn.bingoogolapple:bga-banner:2.2.4@aar'
-    implementation 'com.wxt:base-core:1.1.0.3@aar'
+    //基本框架包
+    implementation 'com.wxt:base-core:1.1.0.7.9.11@aar'
+    // Glide
+    kapt 'com.github.bumptech.glide:compiler:4.3.1'
+    implementation 'com.github.bumptech.glide:glide:4.3.1'
+    //
 }
 
 
