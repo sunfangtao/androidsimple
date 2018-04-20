@@ -4,15 +4,15 @@ apply plugin: 'kotlin-kapt'
 apply plugin: 'kotlin-android-extensions'
 
 android {
-    compileSdkVersion 26
+    compileSdkVersion 27
     buildToolsVersion '26.0.2'
     defaultConfig {
         // TODO 替换自己应用的ID（从管理员获取）,applicationId错误将直接关闭APP
         applicationId "com.sft.newbaseactivityapplication"
         minSdkVersion 15
-        targetSdkVersion 26
+        targetSdkVersion 27
         versionCode 1
-        versionName "2.0.0"
+        versionName "1.0.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
         manifestPlaceholders = [
@@ -83,20 +83,18 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    compile 'com.android.support:appcompat-v7:26.+'
-    compile 'com.android.support:design:26.+'
-    compile 'com.android.support:recyclerview-v7:26.+'
+    compile 'com.android.support:appcompat-v7:27.+'
+    compile 'com.android.support:design:27.+'
+    compile 'com.android.support:recyclerview-v7:27.+'
     compile 'com.android.support.constraint:constraint-layout:1.0.1'
     compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
     testCompile 'junit:junit:4.12'
 
-    // BaseGuideActivity需要使用
-    implementation 'cn.bingoogolapple:bga-banner:2.2.4@aar'
     // 基本框架包
-    implementation 'com.wxt:base-core:1.2.0@aar'
+    implementation 'com.wxt:base-core:1.3.5@aar'
     // Glide
-    kapt 'com.github.bumptech.glide:compiler:4.3.1'
-    implementation 'com.github.bumptech.glide:glide:4.3.1'
+    kapt 'com.github.bumptech.glide:compiler:4.6.1'
+    implementation 'com.github.bumptech.glide:glide:4.6.1'
     //
 }
 

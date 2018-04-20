@@ -15,6 +15,10 @@
     <color name="toolbarColorMenu">#000000</color>
     <!-- 标题栏右侧弹出菜单颜色 -->
     <color name="toolbarColorPopupMenu">#000000</color>
+    <!-- 标题栏返回按钮颜色 -->
+    <color name="toolbarNavigationBtn">#FFFFFF</color>
+    <!-- 标题栏下方横线颜色 -->
+    <color name="toolbarDownLine">#FFFFFF</color>
 
     <!-- —————————————————————————————————————————————————————————————————————————————————————————— -->
     <!-- 自定义颜色，可根据需求修改 -->

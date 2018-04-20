@@ -10,6 +10,7 @@ import org.json.JSONObject
 /**
  * 登录页面
  * 实现AutoLoginListener的类中返回LoginActivity.class进行关联绑定
+ * 点击登录调用login（username，password，url）或login（username，password）即可
  */
 class LoginActivity : BaseLoginActivity<User>() {
 

@@ -1,6 +1,5 @@
 package com.nevbg.simple.activity
 
-import com.nevbg.simple.bean.User
 import com.wxt.library.base.activity.BaseWelcomeActivity
 import com.wxt.library.listener.AutoLoginListener
 import com.wxt.library.listener.GuideListener
@@ -10,9 +9,9 @@ import org.json.JSONObject
 
 /**
  * 欢迎界面
- * GuideListener 用于增加引导页功能，需要与相应BaseGuideActivity配合使用
- * AutoLoginListener 用户已登录用户的自动登录功能
- * PermissionListener 用户可在欢迎界面直接申请权限
+ * GuideListener 用于增加引导页功能，需要与相应BaseGuideActivity配合使用，只在BaseWelcomeActivity中生效
+ * AutoLoginListener 用户已登录用户的自动登录功能，只在BaseWelcomeActivity中生效
+ * PermissionListener 用户可在欢迎界面直接申请权限，只在BaseWelcomeActivity中生效
  */
 class WelcomeActivity : BaseWelcomeActivity(), GuideListener, AutoLoginListener<Any>, PermissionListener {
 

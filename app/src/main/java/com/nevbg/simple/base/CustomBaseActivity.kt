@@ -14,4 +14,9 @@ open class CustomBaseActivity : BaseParseHelperActivity() {
      */
     override fun isTitleCenter() = true
 
+    /**
+     * 标题栏下方是否有横线（1px）
+     * return true:有，false：没有
+     */
+    override fun isShowDownLine() = false
 }

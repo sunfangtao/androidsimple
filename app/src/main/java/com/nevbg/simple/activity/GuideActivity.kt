@@ -11,7 +11,7 @@ import java.util.*
  * 必须继承BaseGuideActivity
  * 需要实现setGuideViews，用于返回引导页面显示的数据 List大小就是页面个数
  * 完成引导功能后，需要调用closeGuide()方法，否则将认为下次仍然需要引导
- * 实现GuideLisener的类中返回GuideActivity.class进行关联绑定
+ * 实现GuideListener的类中返回GuideActivity.class进行关联绑定t
  */
 class GuideActivity : BaseGuideActivity() {
 

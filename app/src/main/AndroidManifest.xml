@@ -25,6 +25,18 @@
             android:label="login" />
         <activity android:name=".activity.GuideActivity" />
 
+        <!-- 如果提示FileProvider冲突，请放开以下注释代码 -->
+        <!--<provider-->
+            <!--android:name="android.support.v4.content.FileProvider"-->
+            <!--android:authorities="${applicationId}.fileprovider"-->
+            <!--android:exported="false"-->
+            <!--android:grantUriPermissions="true">-->
+            <!--<meta-data-->
+                <!--tools:replace="android:resource"-->
+                <!--android:name="android.support.FILE_PROVIDER_PATHS"-->
+                <!--android:resource="@xml/file_provider" />-->
+        <!--</provider>-->
+
         <meta-data
             android:name="appId"
             android:value="${APP_ID}" />

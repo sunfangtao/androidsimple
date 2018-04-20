@@ -12,12 +12,14 @@ BaseActivity使用方法：
 1、BaseActivity中内置了toast、savedInstanceState、toolbar、sharedPreferenceUtil等使用小工具
 2、BaseActivity通信可使用广播Intent intent = new Intent(Activity.name); 回调public void forReceiverResult(Intent intent)方法，LocalBroadcastManager.getInstance(this)
 3、BaseActivity内置了ToolBar对象的处理，使用时添加布局即可(R.layout.toolbar)
-三、BaseActiviyt子类
+三、BaseActivity子类
 1、BaseParseHelperActivity 实现自动解析，解析过程在线程中执行，复写getHttpParseHelper()可自定义解析
 2、BaseWelcomeActivity 实现欢迎、引导、自动登录、权限申请等功能（通过Listener实现）可参考WelcomeActivity
 3、RadioButtonFragmentActivity 实现RadioButton为底部，Fragment为切换页面的功能
 4、BaseLoginActivity 实现基本的登录功能以及临时登录的返回，实现登录用户名和密码的自动保存；可通过getLastUserName()，getLastPassword()进行获取
 5、BaseGuideActivity 实现基本的引导页功能
+6、AlbumSelectActivity 实现相册展示，选择图片功能（只能从一个相册选择，可设置最大选择数目）onActivityResult回调
+7、SelectCityActivity 选择城市onActivityResult回调
 
 BaseAdapter使用方法
 1、为RecyclerView的适配器，不支持ListView
