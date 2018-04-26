@@ -30,8 +30,6 @@ android {
         multiDexEnabled true
 
         dexOptions {
-//            additionalParameters += '--main-dex-list=maindexlist.txt'
-//            additionalParameters += '--minimal-main-dex'
             additionalParameters += '--set-max-idx-number=48000'
         }
     }
@@ -39,6 +37,12 @@ android {
     signingConfigs {
         // TODO 可以替换签名文件（可选）
         release {
+            keyAlias '1000'
+            keyPassword '123456'
+            storeFile file('C:/Users/Administrator/Desktop/flysand.jks')
+            storePassword '123456'
+        }
+        debug {
             keyAlias '1000'
             keyPassword '123456'
             storeFile file('C:/Users/Administrator/Desktop/flysand.jks')
@@ -55,6 +59,7 @@ android {
 
         debug {
             applicationIdSuffix ".debug"
+            signingConfig signingConfigs.debug
         }
     }
 
