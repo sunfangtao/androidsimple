@@ -15,6 +15,9 @@ android {
         versionName "1.0.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
+        // 解决path中使用values中资源无法使用问题
+        vectorDrawables.useSupportLibrary = true
+
         manifestPlaceholders = [
                 // TODO 替换自己应用的APP_ID和DEFAULT_HTTP_PARAMS(格式：key1:value1,key2:value2...)
                 APP_ID             : "023b1a33-192c-43e0-9fa9-9f4dd7be780c",
@@ -72,6 +75,7 @@ android {
     productFlavors {
     }
 
+    // 新版本中已经不能使用直接生成的apk进行安装了，请使用右侧Gradle->module中的install命令生成并安装
     applicationVariants.all { variant ->
         variant.outputs.all { output ->
             def outputFile = output.outputFile
@@ -96,7 +100,7 @@ dependencies {
     testCompile 'junit:junit:4.12'
 
     // 基本框架包
-    implementation 'com.wxt:base-core:1.3.5@aar'
+    implementation 'com.wxt:base-core:2.0.6-SNAPSHOT@aar'
     // Glide
     kapt 'com.github.bumptech.glide:compiler:4.6.1'
     implementation 'com.github.bumptech.glide:glide:4.6.1'

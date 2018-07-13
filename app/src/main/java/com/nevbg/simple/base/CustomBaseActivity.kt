@@ -19,4 +19,10 @@ open class CustomBaseActivity : BaseParseHelperActivity() {
      * return true:有，false：没有
      */
     override fun isShowDownLine() = false
+
+    /**
+     * 标题栏是否显示导航按钮
+     * return true:有，false：没有
+     */
+    override fun isShowNavigationBtn() = true
 }

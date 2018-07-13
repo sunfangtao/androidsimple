@@ -12,7 +12,7 @@
 
     <!-- 设置Toolbar标题字体样式 -->
     <style name="Toolbar.TitleText" parent="BaseToolbar.TitleText">
-        <item name="android:textSize">38sp</item>
+        <item name="android:textSize">18sp</item>
         <item name="android:textColor">@color/colorRed</item>
     </style>
 
