@@ -22,7 +22,7 @@ allprojects {
         mavenCentral()
         google()
         maven{
-            url="http://221.0.91.34:5081/nexus/content/groups/public/"
+            url="http://222.135.141.236:8081/nexus/content/groups/public/"
         }
     }
 }

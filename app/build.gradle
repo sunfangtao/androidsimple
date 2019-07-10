@@ -22,6 +22,9 @@ android {
                 // TODO 替换自己应用的APP_ID和DEFAULT_HTTP_PARAMS(格式：key1:value1,key2:value2...)
                 APP_ID             : "023b1a33-192c-43e0-9fa9-9f4dd7be780c",
                 DEFAULT_HTTP_PARAMS: "serverId:6cdb89e16d994a459494cf9ebb55c198",
+                // TODO 替换自己应用的服务器地址
+                URL                : "http://122.5.51.134:12080/ApplicationListenerManager",
+                UNION_URL          : "http://122.5.51.134:3080/apptransponder"
         ]
 
         javaCompileOptions {
@@ -42,13 +45,13 @@ android {
         release {
             keyAlias '1000'
             keyPassword '123456'
-            storeFile file('C:/Users/Administrator/Desktop/flysand.jks')
+            storeFile file('C:/Users/Administrator.USER-20190303UG/Desktop/flysand.jks')
             storePassword '123456'
         }
         debug {
             keyAlias '1000'
             keyPassword '123456'
-            storeFile file('C:/Users/Administrator/Desktop/flysand.jks')
+            storeFile file('C:/Users/Administrator.USER-20190303UG/Desktop/flysand.jks')
             storePassword '123456'
         }
     }
@@ -100,7 +103,7 @@ dependencies {
     testCompile 'junit:junit:4.12'
 
     // 基本框架包
-    implementation 'com.wxt:base-core:2.0.6-SNAPSHOT@aar'
+    implementation 'com.wxt:base-core:1.0.2-SNAPSHOT@aar'
     // Glide
     kapt 'com.github.bumptech.glide:compiler:4.6.1'
     implementation 'com.github.bumptech.glide:glide:4.6.1'
