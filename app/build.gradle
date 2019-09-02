@@ -30,9 +30,9 @@ android {
                 APP_ID             : "023b1a33-192c-43e0-9fa9-9f4dd7be780c",
                 DEFAULT_HTTP_PARAMS: "serverId:6cdb89e16d994a459494cf9ebb55c198",
                 // TODO 替换申请的极光 key
-//                JPUSH_PKGNAME      : defaultConfig.applicationId,
-//                JPUSH_APPKEY       : "e8a6d6e014728d415b1350b3", //JPush上注册的包名对应的appKey.
-//                JPUSH_CHANNEL      : "developer-default", //暂时填写默认值即可.
+                JPUSH_PKGNAME      : defaultConfig.applicationId,
+                JPUSH_APPKEY       : "", //JPush上注册的包名对应的appKey.
+                JPUSH_CHANNEL      : "developer-default", //暂时填写默认值即可.
                 // TODO 高德地图
 //                MAP_KEY            : "df811166a767fa2f6fbb236e5c038eb0",
                 // TODO 替换自己应用的服务器地址
@@ -79,7 +79,7 @@ android {
             applicationIdSuffix ".debug"
             signingConfig signingConfigs.debug
             manifestPlaceholders = [
-//                    JPUSH_PKGNAME      : defaultConfig.applicationId + applicationIdSuffix,
+                    JPUSH_PKGNAME      : defaultConfig.applicationId + applicationIdSuffix,
 //                    JPUSH_APPKEY       : "e8a6d6e014728d415b1350b3", //JPush上注册的包名对应的appKey.
 //                    DEFAULT_HTTP_PARAMS: "serverId:82a68716144845f48bd5a7264a3ec548",
 //                    MAP_KEY            : "4951819e37b2f38ee2af4921d1ee57c6",// 高德地图
@@ -110,16 +110,16 @@ android {
 }
 
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    compile 'com.android.support:appcompat-v7:27.+'
-    compile 'com.android.support:design:27.+'
-    compile 'com.android.support:recyclerview-v7:27.+'
-    compile 'com.android.support.constraint:constraint-layout:1.0.1'
-    compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
-    testCompile 'junit:junit:4.12'
+    implementation 'com.android.support:appcompat-v7:27.+'
+    implementation 'com.android.support:design:27.+'
+    implementation 'com.android.support:recyclerview-v7:27.+'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.1'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    testImplementation 'junit:junit:4.12'
 
     // 基本框架包
     implementation 'com.wxt:base-core:1.0.1@aar'
