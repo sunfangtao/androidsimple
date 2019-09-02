@@ -16,13 +16,13 @@
         <item name="android:textColor">@color/colorRed</item>
     </style>
 
-    <!-- 标题栏标题样式 ？？？？？？？-->
+    <!-- 标题栏标题样式 弹出菜单-->
     <style name="Toolbar.PopupOverlay" parent="BaseToolbar.PopupOverlay">
         <item name="android:textSize">28sp</item>
         <item name="android:textColor">@color/colorAccent</item>
     </style>
 
-    <!-- 标题栏标题样式 ？？？？？？？-->
+    <!-- 标题栏标题样式 菜单-->
     <style name="Toolbar.AppBarOverlay" parent="BaseToolbar.AppBarOverlay">
         <item name="android:textSize">14sp</item>
         <item name="actionMenuTextColor">@color/colorAccent</item>

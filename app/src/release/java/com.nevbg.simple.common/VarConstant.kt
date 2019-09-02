@@ -6,5 +6,5 @@ package com.nevbg.simple.common
 
 object VarConstant {
     // TODO 修改生产服务器的信息
-    const val IP_PORT = "http://221.0.91.34:3080/apptransponder"
+    const val IP_PORT = "http://bek.int-yt.com/appRex"
 }

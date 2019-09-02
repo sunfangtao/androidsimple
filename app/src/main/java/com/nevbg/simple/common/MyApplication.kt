@@ -1,9 +1,6 @@
 package com.nevbg.simple.common
 
-import android.content.Context
-import android.support.multidex.MultiDex
 import com.wxt.library.base.application.BaseApplication
-import com.wxt.library.crash.CrashHandler
 
 /**
  * Created by Administrator on 2017/4/18.
@@ -16,6 +13,8 @@ class MyApplication : CustomBaseApplication() {
         if (INSTANCE == null) {
             INSTANCE = BaseApplication.getInstance()
         }
+        // TODO 极光推送初始化，需要实开启
+//        JPushInterface.init(this)
     }
 
     companion object {

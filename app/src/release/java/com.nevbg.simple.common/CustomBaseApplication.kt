@@ -1,5 +1,7 @@
 package com.nevbg.simple.common
 
+import android.content.Context
+import android.support.multidex.MultiDex
 import com.wxt.library.base.application.BaseApplication
 import com.wxt.library.crash.CrashHandler
 

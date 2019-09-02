@@ -1,5 +1,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.nevbg.simple">
+
+    <!-- 如果提示冲突，请放开以下注释代码 -->
+    <uses-sdk tools:overrideLibrary="com.wxt.library" />
 
     <application
         android:name=".common.MyApplication"
@@ -44,5 +48,15 @@
         <meta-data
             android:name="httpParams"
             android:value="${DEFAULT_HTTP_PARAMS}" />
+
+        <!--<meta-data-->
+            <!--android:name="URL"-->
+            <!--android:value="${URL}"-->
+            <!--tools:replace="android:value" />-->
+
+        <!--<meta-data-->
+            <!--android:name="UNION_URL"-->
+            <!--android:value="${UNION_URL}"-->
+            <!--tools:replace="android:value" />-->
     </application>
 </manifest>
